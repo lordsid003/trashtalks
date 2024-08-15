@@ -8,21 +8,25 @@ import {
     TouchableOpacity
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Colors from "../constants/Colors";
-import Images from "../constants/Images";
+import { useEffect, useRef, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
+
+import { Colors, Images } from "../constants/Data";
 import HeaderCard from "../components/HeaderCard";
 import InputBox from "../components/InputBox";
 import Client from "../components/Client";
 import Server from "../components/Server";
-import { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const Chatbot = ({ route }) => {
     const [messages, setMessages] = useState([]);
     const { mode } = route.params;
     const navigation = useNavigation();
+    const scrollViewRef = useRef();
+
+    useEffect(() => {
+        scrollViewRef.current?.scrollToEnd({ animated: true });
+    }, [messages]);
 
     const deployMessage = (message) => {
         setMessages((prevMessages) => [...prevMessages, message]);
@@ -36,13 +40,13 @@ const Chatbot = ({ route }) => {
     return (
         <>
             <StatusBar translucent backgroundColor="transparent" barStyle="light-content"/>
-            <SafeAreaView className="flex-1 mt-[-35px]">
+            <SafeAreaView className="flex-1 mt-[-64]">
                 <ImageBackground
                     source={Images.background}
                     className="flex-1 h-full w-full"
                     resizeMode="cover"
                 >
-                    <View className="mt-10 flex-row justify-between px-4 py-1 items-center">
+                    <View className="mt-[17%] flex-row justify-between px-4 py-1 items-center">
 
                         <TouchableOpacity
                             activeOpacity={0.6}
@@ -78,7 +82,7 @@ const Chatbot = ({ route }) => {
                         <Text className="text-gray-500 text-xs text-center">Messages to this chat are temporary and AI generated. If you can't even handle a roast, you need therapy.</Text>
                     </View>
 
-                    <ScrollView contentContainerStyle={{ paddingBottom: 20 }}>
+                    <ScrollView ref={scrollViewRef} contentContainerStyle={{ paddingBottom: 20 }}>
                         {
                             (mode === "asian") ?
                             <>
@@ -120,6 +124,8 @@ const Chatbot = ({ route }) => {
                                             key={index.toString()}
                                             message={message.text}
                                             time={message.time}
+                                            meme={message.meme}
+                                            mode={message.mode}
                                         />
                                     )
                                 )

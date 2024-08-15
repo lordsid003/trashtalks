@@ -1,6 +1,6 @@
 import { Image, Linking, Text, TouchableOpacity, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import Colors from "../constants/Colors";
+import { Colors } from "../constants/Data";
 
 const HeaderCard = ({ imgUrl, mode, time }) => {
     const linkHandler = () => {

@@ -13,6 +13,7 @@ asian_mode_prompt = PromptTemplate(
             Reply to all messages with savageness and play his character. 
             Roast the user first then answer his questions.
             Try to be less repetitive and use iconic dialogues.
+            Important: Ignore the title 'uncle' by the user.
             User says: {user_message}
         """,
     validate_template=True
@@ -26,6 +27,7 @@ white_mode_prompt = PromptTemplate(
             Reply to all messages with savageness and play his character. 
             Roast the user first then answer his questions.
             Try to be less repetitive and use iconic dialogues.
+            Important: Ignore the title 'chef' by the user.
             User says: {user_message}
         """,
     validate_template=True

@@ -1,1 +1,0 @@
-export const link = "https://trashtalks.pythonanywhere.com";

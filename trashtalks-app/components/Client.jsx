@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import Colors from '../constants/Colors';
+import { Colors } from '../constants/Data';
 
 const Client = ({ message, time }) => {
   return (

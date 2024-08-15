@@ -1,9 +1,8 @@
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import Colors from "../constants/Colors";
 import { useState } from "react";
-import { IP, link } from "../constants/IP";
 import * as Progress from 'react-native-progress';
+import { link, Colors } from "../constants/Data";
 
 const InputBox = ({ messageHandler, mode }) => {
     const [message, setMessage] = useState("");
@@ -19,33 +18,69 @@ const InputBox = ({ messageHandler, mode }) => {
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             sender: "client"
         });
-        try {
-            const response = await fetch(`${link}/chat/${mode}-mode`, {
-                method: "POST",
-                headers: {
-                    "content-type": "application/json",
-                },
-                body: JSON.stringify({message: message}),
-            });
-            const data = await response.json();
+
+        if (message.toLowerCase().includes("chef") && mode === "white") {
+            try {
+                const response = await fetch(`${link}/chat/white-mode`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ message: message }),
+                });
+                const data = await response.json();
+                messageHandler({
+                    text: data.response,
+                    meme: false,
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    sender: "server"
+                });
+            }
+            catch(error) {
+                console.error("Failed to send data to server", error);
+            }
+        }
+
+        else if (message.toLowerCase().includes("uncle") && mode === "asian") {
+            try {
+                const response = await fetch(`${link}/chat/asian-mode`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ message: message }),
+                });
+                const data = await response.json();
+                messageHandler({
+                    text: data.response,
+                    meme: false,
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    sender: "server"
+                });
+            }
+            catch(error) {
+                console.error("Failed to send data to server", error);
+            }
+        }
+        
+        else {
             messageHandler({
-                text: data.response,
+                text: (mode === "asian") ? "Are you stupid lah? Call me 'Uncle', you failure." : 
+                        (mode === "white") ? "You could use some manners. Call me 'chef' if you want to talk to me!" : null,
+                meme: true,
+                mode: mode,
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 sender: "server"
-            })
+            });
         }
-        catch(error) {
-            
-        }
-        finally {
-            setLoading(false);
-        }
+        
+        setLoading(false);
         setMessage("");
     };
 
     return (
         <View 
-            className="flex-row justify-between items-center px-3 py-2 mx-3 my-2 rounded-lg"
+            className="flex-row justify-between items-center px-3 py-2 mx-5 my-3 rounded-lg"
             style={{ borderWidth: 0.5, borderColor: Colors.white(0.7), backgroundColor: Colors.white(0.15) }}
         >
             {
