@@ -6,7 +6,7 @@ const Server = ({ message, time, meme, mode }) => {
       <View className="w-[60%] ml-5 mr-auto">
         <View 
             className="p-4 rounded-t-xl rounded-br-xl"
-            style={{ backgroundColor: Colors.white(0.1), borderWidth: 0.3, borderColor: Colors.white(0.45) }}
+            style={{ backgroundColor: Colors.white(0.1), borderWidth: 0.5, borderColor: Colors.white(0.45) }}
         >
           {
             meme &&

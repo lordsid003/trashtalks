@@ -39,7 +39,7 @@ const Home = () => {
                     resizeMode="cover"
                 >
                 
-                <View className="flex-row mt-10 items-center justify-between px-5">
+                <View className="flex-row mt-12 items-center justify-between px-5">
 
                     <Image
                         source={Images.title}

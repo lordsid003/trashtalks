@@ -19,10 +19,10 @@ const Intro = () => {
             <SafeAreaView className="flex-1 mt-[-64]">
                 <ImageBackground
                     source={Images.background}
-                    className="flex-1 items-center h-full w-full"
+                    className="flex-1 items-center h-full w-full justify-center"
                     resizeMode="cover"
                 >
-                <View className="mt-20 items-center justify-center">
+                <View className="mt-5 items-center justify-center">
                     <Image
                         source={Images.title}
                         className="w-64 h-32"
@@ -40,22 +40,21 @@ const Intro = () => {
                     />
                     <Image
                         source={Images.tagline}
-                        className="w-full h-36 mt-[-10]"
+                        className="w-full h-36"
                         resizeMode="cover"
                     />
-                    <Text
-                        className="w-[85%] self-center text-gray-500 text-xs text-center mt-[-25] mb-5"
-                    >
-                        Prepare yourself for a healthy roast from savage AI chatbots inspired by two famous youtube celebrities.
-                        {"\n"} The responses may be slow initially due to free hosting services, have some patience and give it a shot.
-                    </Text>
                     <TouchableOpacity
                         activeOpacity={0.8}
                         onPress={() => navigation.navigate("home")}
-                        className="bg-gray-100 w-[50%] rounded-xl p-3 justify-center items-center"
+                        className="bg-gray-100 w-[50%] rounded-xl p-3 justify-center items-center mt-[-20] mb-5"
                     >
                         <Text className=" font-bold text-lg">Let's go</Text>
                     </TouchableOpacity>
+                    <Text
+                        className="w-[85%] self-center text-gray-500 text-xs text-center"
+                    >
+                        Prepare yourself for a healthy roast from savage AI chatbots inspired by two famous youtube celebrities.
+                    </Text>
                 </ImageBackground>
             </SafeAreaView>
         </>

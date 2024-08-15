@@ -18,7 +18,7 @@ const HeaderCard = ({ imgUrl, mode, time }) => {
         >
             <View 
                 className="w-full overflow-hidden rounded-t-xl rounded-br-xl justify-center items-center"
-                style={{ backgroundColor: Colors.white(0.1), borderWidth: 0.3, borderColor: Colors.white(0.45) }}
+                style={{ backgroundColor: Colors.white(0.1), borderWidth: 0.5, borderColor: Colors.white(0.45) }}
             >
                 <Image
                     source={imgUrl}

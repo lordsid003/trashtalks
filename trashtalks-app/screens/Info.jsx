@@ -49,6 +49,9 @@ const Info = () => {
                         <Text className="text-gray-400 text-center w-[80%] self-center">
                             ** The chatbot is functional only when the user exercises the correct prompt titles, else the bot cheeses them.
                         </Text>
+                        <Text className="text-gray-400 text-center w-[80%] self-center">
+                            The responses may be slow initially due to free hosting services, have some patience and give it a shot.
+                        </Text>
                     </View>
                     <View className="gap-1">
                         <Text className="text-gray-500 font-bold">
