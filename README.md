@@ -9,7 +9,8 @@
 ---
 
 ## How does it align with the theme?
-The theme *"Functionally Dysfunctional"* is brilliantly captured in *TrashTalks*, where the app’s primary function is deliberately infused with humorous dysfunction. Instead of providing straightforward assistance or polite AI interactions, users are met with hilariously aggressive and mocking responses from iconic personalities like Gordon Ramsay and Steven He's dad. The quirky twist lies in how the app responds: only when specific keywords like *"Chef"* or *"Uncle"* are used will the bots engage, otherwise, users are met with sarcastic memes. **This playful unpredictability highlights the theme by blending functionality with a layer of comical absurdity, making the user experience both useful and hilariously dysfunctional.**
+- The theme *"Functionally Dysfunctional"* is brilliantly captured in *TrashTalks*, where the app’s primary function is deliberately infused with humorous dysfunction. Instead of providing straightforward assistance or polite AI interactions, users are met with hilariously aggressive and mocking responses from iconic personalities like **Gordon Ramsay** and **Steven He's dad**.
+-  The quirky twist lies in how the app responds: only when specific keywords like *"Chef"* or *"Uncle"* are used will the bots engage, otherwise, users are met with sarcastic memes. **This playful unpredictability highlights the theme by blending functionality with a layer of comical absurdity, making the user experience both useful and hilariously dysfunctional.**
 
 ## 🎉 Features
 
