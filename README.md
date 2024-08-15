@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/c507cb2e-8abc-405f-b08d-5d72e7ee69f8
      ```
    - Run the Flask server:
      ```bash
-     flask app.py
+     python app.py
      ```
    - Ensure your backend is running and accessible.
 
