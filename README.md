@@ -116,4 +116,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to provide suggestions and feedbacks at siddhverma03@gmail.com.
+Contributions are welcome! Please feel free to provide suggestions and feedbacks at [siddhverma03@gmail.com](mailto:siddhverma03@gmail.com)
+
