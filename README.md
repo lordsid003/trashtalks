@@ -6,6 +6,8 @@
 ---
 ✨ Download the Application Now at: https://trashtalks-web.vercel.app
 
+**Application Website** developed and designed by: [devWithAdi](https://github.com/aditya7483thakur)
+
 ---
 
 ## How does it align with the theme?
@@ -62,7 +64,7 @@ https://github.com/user-attachments/assets/c507cb2e-8abc-405f-b08d-5d72e7ee69f8
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/trashtalks.git
+   git clone https://github.com/lordsid003/trashtalks.git
    cd trashtalks
    ```
 
@@ -97,9 +99,9 @@ https://github.com/user-attachments/assets/c507cb2e-8abc-405f-b08d-5d72e7ee69f8
      ```
 
 5. **Run the React Native app**:
+   Using Expo go app
    ```bash
-   npx expo start // for expo-go app
-   npx expo 
+   npx expo start 
    ```
 
 ## Gallery:
